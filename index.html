@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>میلاد شمس‌آرا | رزومه</title>
-<meta name="description" content="رزومه میلاد شمس‌آرا، مدیر کل ماشین‌آلات معدنی و متخصص نگهداری و تعمیرات">
+<title>میلاد شمس‌آرا | مدیر ماشین‌آلات معدنی</title>
+<meta name="description" content="رزومه و خدمات میلاد شمس‌آرا، مدیر کل ماشین‌آلات معدنی. مشاوره، نگهداری، کدینگ و آموزش.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,49 +12,75 @@
   :root {
     --bg: #0f1115; --fg: #e8eaed; --muted: #9aa3ad;
     --card: #171a21; --border: #262b33; --accent: #4f9cf9;
-    --radius: 16px; --max: 960px;
+    --radius: 16px; --max: 1000px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.75; -webkit-font-smoothing: antialiased; font-family: 'Vazirmatn', system-ui, sans-serif; }
   .wrap { max-width: var(--max); margin-inline: auto; padding-inline: 20px; }
-  .site-header { position: sticky; top: 0; z-index: 10; background: rgba(15, 17, 21, 0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 10; background: rgba(15, 17, 21, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
   .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .brand { font-weight: 700; color: var(--fg); text-decoration: none; }
-  .nav-links { display: flex; gap: 16px; align-items: center; }
-  .nav-links a { color: var(--muted); text-decoration: none; font-size: .92rem; transition: 0.2s; }
+  .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.9rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; transition: 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-  .lang-switch { border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; font-weight: 600; }
-  .hero { padding-block: 72px 48px; }
+  .lang-switch { border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; font-weight: 600; font-size: 1.1rem; }
+
+  /* Hero */
+  .hero { padding-block: 60px 40px; }
   .hero .role { color: var(--accent); font-weight: 600; font-size: 1.05rem; margin: 0 0 6px; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; line-height: 1.2; }
-  .hero .meta { color: var(--muted); margin: 0 0 24px; }
-  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border); text-decoration: none; color: var(--fg); font-weight: 600; font-size: .95rem; transition: .2s; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 12px; line-height: 1.2; }
+  .hero .meta { color: var(--muted); margin: 0 0 16px; font-size: 1.05rem; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border); text-decoration: none; color: var(--fg); font-weight: 600; font-size: .95rem; transition: .2s; text-align: center; }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .btn:hover { transform: translateY(-1px); }
-  section { padding-block: 44px; }
-  h2 { font-size: 1.5rem; margin: 0 0 20px; }
-  h2::after { content: ""; display: block; width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 8px; }
-  .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .btn:hover { transform: translateY(-2px); background: var(--card); }
+  .btn.primary:hover { background: #3b82f6; }
+
+  /* Sections */
+  section { padding-block: 40px; }
+  h2 { font-size: 1.6rem; margin: 0 0 24px; }
+  h2::after { content: ""; display: block; width: 50px; height: 4px; background: var(--accent); border-radius: 2px; margin-top: 8px; }
+  
+  /* Cards Grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: 0.3s; }
+  .card:hover { border-color: var(--accent); }
+  .card h3 { margin: 0 0 12px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; }
+  .faq-answer { color: var(--muted); font-size: 0.95rem; }
+  
+  /* Timeline */
   .timeline { display: grid; gap: 20px; }
   .job { position: relative; padding-inline-start: 22px; border-inline-start: 2px solid var(--border); }
   .job::before { content: ""; position: absolute; inset-inline-start: -6px; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
-  .job h3 { margin: 0 0 2px; font-size: 1.05rem; }
-  .job .meta { color: var(--muted); font-size: .9rem; margin: 0 0 6px; }
-  .job p { margin: 0; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-  .card h3 { margin: 0 0 6px; }
-  .card .meta { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+  .job h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .job .meta { color: var(--muted); font-size: .9rem; margin: 0 0 8px; }
+  
+  /* Skills/Table */
+  .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill-tag { background: var(--card); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 0.9rem; color: var(--fg); }
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
   table { width: 100%; border-collapse: collapse; font-size: .92rem; }
-  th, td { padding: 10px 12px; text-align: start; border-bottom: 1px solid var(--border); }
+  th, td { padding: 12px 16px; text-align: start; border-bottom: 1px solid var(--border); }
   th { background: var(--card); font-weight: 600; }
   tr:last-child td { border-bottom: none; }
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-  .contact-grid a { color: var(--accent); text-decoration: none; }
-  .contact-grid a:hover { text-decoration: underline; }
-  footer { border-top: 1px solid var(--border); padding-block: 24px; color: var(--muted); font-size: .88rem; text-align: center; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .contact-card h3 { margin: 0 0 8px; font-size: 1rem; }
+  .contact-card a { color: var(--accent); text-decoration: none; font-size: 0.95rem; }
+  .contact-card a:hover { text-decoration: underline; }
+
+  footer { border-top: 1px solid var(--border); padding-block: 24px; color: var(--muted); font-size: .88rem; text-align: center; margin-top: 40px; }
 </style>
 </head>
 <body>
@@ -63,13 +89,13 @@
   <div class="wrap">
     <a class="brand" href="#">میلاد شمس‌آرا</a>
     <nav class="nav-links">
-      <a href="#about">درباره</a>
-      <a href="#memberships">عضویت‌ها</a>
-      <a href="#skills">مهارت‌ها</a>
+      <a href="#services">خدمات</a>
+      <a href="#projects">پروژه‌ها</a>
       <a href="#experience">سوابق</a>
-      <a href="#courses">دوره‌ها</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#articles">مقالات</a>
       <a href="#contact">تماس</a>
-      <a class="lang-switch" href="en/" title="English" style="font-size: 1.2rem; text-decoration: none;">🇬🇧</a>
+      <a class="lang-switch" href="en/" title="English">🇬🇧</a>
     </nav>
   </div>
 </header>
@@ -77,28 +103,43 @@
 <section class="hero wrap">
   <p class="role">مدیر کل ماشین‌آلات معدنی | متخصص نگهداری و تعمیرات</p>
   <h1>میلاد شمس‌آرا</h1>
-  <p class="meta" style="line-height: 1.6;">آمادگی فعالیت در تمامی معادن کشور و همچنین آمادگی کامل برای کار در خارج از کشور (Relocation) و دورکاری (Remote Work)</p>
+  <p class="meta" style="font-weight: 600; color: var(--fg);">آماده‌ی همکاری استخدامی (داخلی/خارجی) و پذیرش پروژه‌های پیمانی و دورکاری</p>
+  <p class="meta">با بیش از ۱۵ سال تجربه در مدیریت ناوگان، کدینگ قطعات و بهینه‌سازی عملکرد ماشین‌آلات سنگین.</p>
   <div class="actions">
-    <a class="btn primary" href="assets/resume-fa.pdf" download>دانلود رزومه فارسی (PDF)</a>
+    <a class="btn primary" href="assets/resume-fa.pdf" download>دانلود رزومه (PDF)</a>
+    <a class="btn" href="https://wa.me/989169585779" target="_blank">💬 درخواست مشاوره یا پروژه</a>
   </div>
 </section>
 
-<section id="about" class="wrap">
-  <h2>خلاصه سوابق (Professional Summary)</h2>
-  <p>مهندس مکانیک با بیش از ۱۵ سال تجربه در مدیریت ماشین‌آلات معدنی، تعمیر و نگهداری، و بهینه‌سازی عملکرد ناوگان در پروژه‌های بزرگ معدنی و عمرانی. دارای تجربه راه‌اندازی و آموزش ماشین‌آلات در پروژه بین‌المللی ونزوئلا و همکاری با هلدینگ‌های بزرگ نظیر فولاد یزد و فولاد ایرانیان (گل گهر معدن 4). متخصص در برنامه‌ریزی نگهداری پیشگیرانه و اضطراری (PM/CM/EM)، آنالیز روغن، کدینگ قطعات کوماتسو و مدیریت انبار. دارای اعتبارنامه‌های علمی، آموزشی و صنعتی از انجمن‌های معتبر داخلی و بین‌المللی.</p>
+<section id="services" class="wrap">
+  <h2>خدمات من (Services)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🛠️ مشاوره نگهداری و تعمیرات</h3>
+      <p>برنامه‌ریزی استراتژیک PM/CM/EM، تحلیل آنالیز روغن و بهینه‌سازی راندمان ناوگان برای کاهش توقفات.</p>
+    </div>
+    <div class="card">
+      <h3>💻 پروژه‌های دورکاری کدینگ</h3>
+      <p>کدینگ تخصصی قطعات کوماتسو، طراحی ساختار انبار (ABC, VED) و پیاده‌سازی سیستم‌های ROP و EOQ به صورت ریموت.</p>
+    </div>
+    <div class="card">
+      <h3>🎓 راه‌اندازی و آموزش</h3>
+      <p>آموزش اپراتورها، راه‌اندازی ماشین‌آلات سنگین (PDI) و آموزش تیم‌های فنی طبق استانداردهای OEM.</p>
+    </div>
+  </div>
 </section>
 
-<section id="memberships" class="wrap">
-  <h2>عضویت‌های حرفه‌ای و اعتبارنامه‌ها (Memberships & Credentials)</h2>
-  <div class="card">
-    <ul style="margin: 0; padding-right: 20px; line-height: 2;">
-      <li>انجمن مهندسی ساخت و تولید ایران (SMEIR)</li>
-      <li>انجمن مهندسی معدن ایران (SME)</li>
-      <li>انجمن آموزش مهندسی ایران (ISEE)</li>
-      <li>انجمن تولیدکنندگان و واردکنندگان ماشین‌آلات سنگین معدنی، ساختمانی و راه‌سازی</li>
-      <li>شناسه بین‌المللی پژوهشگران و نویسندگان (ORCID): 0009-0005-7618-8462</li>
-      <li>سابقه عضویت در باشگاه پژوهشگران جوان</li>
-    </ul>
+<section id="projects" class="wrap">
+  <h2>پروژه‌های شاخص (Key Projects)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌍 پروژه بین‌المللی ونزوئلا</h3>
+      <p><strong>نقش:</strong> نماینده رسمی شانتویی<br>راه‌اندازی، تحویل و آموزش ۲۸ دستگاه ماشین‌آلات سنگین در معدن طلای بولیوار.</p>
+    </div>
+    <div class="card">
+      <h3>📦 سیستم کدینگ ۳۷,۰۰۰ آیتمی</h3>
+      <p><strong>نقش:</strong> سرپرست واحد کدینگ<br>ترجمه و اصلاح کدینگ قطعات ماشین‌آلات و تاسیسات برای هلدینگ فولاد یزد (۸ شرکت زیرمجموعه).</p>
+    </div>
   </div>
 </section>
 
@@ -111,7 +152,7 @@
     </article>
     <article class="job">
       <h3>سرپرست ماشین‌آلات معدنی</h3>
-      <p class="meta">شرکت عمران کلوت جنوب – معدن ۴ گل‌گهر سیرجان (فولاد ایرانیان) | ۱۴۰۱ تا ۱۴۰۴</p>
+      <p class="meta">شرکت عمران کلوت جنوب – معدن ۴ گل‌گهر سیرجان | ۱۴۰۱ تا ۱۴۰۴</p>
     </article>
     <article class="job">
       <h3>سرپرست ماشین‌آلات معدنی</h3>
@@ -119,7 +160,7 @@
     </article>
     <article class="job">
       <h3>مدیر فنی و ماشین‌آلات معدنی</h3>
-      <p class="meta">شرکت آریا جنوب ایرانیان – معدن سنگ آهن کویر (اسمالون) | ۱۳۹۸ تا ۱۴۰۰</p>
+      <p class="meta">شرکت آریا جنوب ایرانیان – معدن سنگ آهن کویر | ۱۳۹۸ تا ۱۴۰۰</p>
     </article>
     <article class="job">
       <h3>سرپرست دفتر فنی ماشین‌آلات</h3>
@@ -136,66 +177,85 @@
   </div>
 </section>
 
-<section class="wrap">
-  <h2>پروژه بین‌المللی (International Project)</h2>
-  <div class="card">
-    <h3>نماینده رسمی شانتویی (Shantui)</h3>
-    <p class="meta">شرکت اسپادانا – معدن طلای بولیوار، ونزوئلا | اوت ۲۰۲۰ تا دسامبر ۲۰۲۰</p>
-    <ul style="margin-top: 10px; padding-right: 20px; line-height: 1.8;">
-      <li>راه‌اندازی، تحویل و آموزش اپراتورها برای ۲۸ دستگاه ماشین‌آلات سنگین (لودر، بلدوزر، گریدر و دامپتراک).</li>
-      <li>جذب پرسنل محلی و برگزاری دوره‌های آموزشی میدانی برای ایشان در زمینه اصول کار و نگهداری و اپراتوری (PDI-PM).</li>
-    </ul>
-  </div>
-</section>
-
-<section id="education" class="wrap">
-  <h2>تحصیلات (Education)</h2>
-  <div class="card">
-    <h3>کارشناسی مهندسی مکانیک – گرایش ساخت و تولید</h3>
-    <p class="meta">دانشگاه آزاد اسلامی، واحد دورود | معدل: ۱۷.۶۰</p>
-  </div>
-</section>
-
 <section id="skills" class="wrap">
-  <h2>مهارت‌ها (Skills)</h2>
+  <h2>مهارت‌ها و اعتبارنامه‌ها</h2>
+  <div class="card" style="margin-bottom: 20px;">
+    <h3>عضویت‌های حرفه‌ای</h3>
+    <p>انجمن مهندسی ساخت و تولید ایران (SMEIR) • انجمن مهندسی معدن ایران (SME) • انجمن آموزش مهندسی ایران (ISEE) • انجمن تولیدکنندگان ماشین‌آلات سنگین • ORCID: 0009-0005-7618-8462 • باشگاه پژوهشگران جوان</p>
+  </div>
   <div class="card">
-    <ul style="margin: 0; padding-right: 20px; line-height: 2;">
-      <li><strong>فنی:</strong> مدیریت ماشین‌آلات معدنی، نگهداری و تعمیرات (CM/EM/PM)، تحلیل آنالیز روغن، کدینگ قطعات کوماتسو، مدیریت انبار، طراحی چیدمان انبار (دینامیک و استاتیک) طبق استانداردهای (ABC, VED, XYZ, 3D MUSIC)، تعیین نقطه سفارش و محاسبه آن ROP و EOQ، آشنایی با استانداردهای ISO/ISIRI/ASTM/ASME، بازرسی جوش (AWS-QC-1)، نرم‌افزار (LINK ONE, SIS, OFFICE). راهکاران.</li>
-      <li><strong>مدیریتی:</strong> برنامه‌ریزی استراتژیک تعمیرات (CM/EM/PM) و ارائه گزارش‌های تحلیلی ماهانه جهت بهبود راندمان. توانایی استخراج از کتب تخصصی دستگاه‌ها و انجام و برنامه‌ریزی عملیات طبق اصول پیشنهادی کمپانی تولیدکننده.</li>
-      <li><strong>نرم:</strong> مدیریت ناوگان ماشین‌آلات و هدایت تیم‌های فنی و عملیاتی، همکاری بین‌بخشی، گزارش‌دهی فنی، مدیریت منابع انسانی، برنامه‌ریزی استراتژیک، ارائه راهکار مناسب جهت بهره‌وری بالاتر.</li>
-      <li><strong>زبان:</strong> انگلیسی (خوب – مکالمه، خواندن، نوشتن).</li>
-    </ul>
+    <h3>مهارت‌های کلیدی</h3>
+    <div class="skills-list">
+      <span class="skill-tag">مدیریت ناوگان</span>
+      <span class="skill-tag">نگهداری (CM/EM/PM)</span>
+      <span class="skill-tag">آنالیز روغن</span>
+      <span class="skill-tag">کدینگ کوماتسو</span>
+      <span class="skill-tag">طراحی انبار (ABC, VED)</span>
+      <span class="skill-tag">تعهد ROP/EOQ</span>
+      <span class="skill-tag">ISO/ASTM</span>
+      <span class="skill-tag">AWS-QC-1</span>
+      <span class="skill-tag">LINK ONE, SIS</span>
+      <span class="skill-tag">زبان انگلیسی (خوب)</span>
+    </div>
   </div>
 </section>
 
-<section id="courses" class="wrap">
-  <h2>دوره‌های آموزشی و گواهینامه‌ها (Certifications & Training)</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>عنوان دوره</th><th>مؤسسه</th><th>مدت</th></tr></thead>
-      <tbody>
-        <tr><td>اصول نگهداری و تعمیرات</td><td>شرکت هسکو</td><td>۸۰ ساعت</td></tr>
-        <tr><td>اصول مدیریت</td><td>دکتر مازیار میر</td><td>۸۰ ساعت</td></tr>
-        <tr><td>بازرسی جوش AWS-QC-1</td><td>انجمن جوشکاری و آزمایش‌های غیر مخرب ایران (IWNT)</td><td>۸۰ ساعت</td></tr>
-        <tr><td>تراشکار و فرزکار CNC</td><td>سازمان فنی و حرفه‌ای خرم‌آباد</td><td>۱۲۰۰ ساعت</td></tr>
-        <tr><td>پرس شلنگ هیدرولیک</td><td>شرکت متاکو</td><td>۸۰ ساعت</td></tr>
-        <tr><td>سرویس و نگهداری عمومی ماشین‌آلات</td><td>شرکت یکران وزین آریا</td><td>۲۰ ساعت</td></tr>
-        <tr><td>ایمنی ماشین‌آلات معدنی</td><td>مهندس حمیدرضا احراری</td><td>۲۰ ساعت</td></tr>
-        <tr><td>مدیریت منابع انسانی</td><td>شرکت ایران خودرو دیزل</td><td>۲۰ ساعت</td></tr>
-        <tr><td>آنالیز روغن ماشین‌آلات و تجهیزات معدنی</td><td>شرکت فنی و مهندسی نوین نت پارس</td><td>۲۰ ساعت</td></tr>
-        <tr><td>شناخت لاستیک‌های معدنی</td><td>دکتر میقانی</td><td>۲۰ ساعت</td></tr>
-      </tbody>
-    </table>
+<section id="articles" class="wrap">
+  <h2>مقالات فنی (Technical Articles)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📝 آنالیز روغن: کلید پیشگیری از خرابی</h3>
+      <p>چگونه با نمونه‌گیری صحیح و تفسیر نتایج، عمر مفید ماشین‌آلات سنگین را تا ۳۰٪ افزایش دهیم.</p>
+    </div>
+    <div class="card">
+      <h3>🔢 کدینگ قطعات کوماتسو (Komatsu)</h3>
+      <p>اصول رمزگشایی و پیاده‌سازی ساختار یکپارچه کدینگ برای کاهش زمان تامین قطعات.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="wrap">
+  <h2>سوالات متداول (FAQ)</h2>
+  <div class="card">
+    <div class="faq-item">
+      <div class="faq-question">آیا برای کار در خارج از کشور آماده هستید؟</div>
+      <div class="faq-answer">بله، دارای پاسپورت معتبر و آمادگی کامل برای مهاجرت کاری (Relocation) با توجه به سابقه کار در ونزوئلا.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">آیا پروژه‌های دورکاری قبول می‌کنید؟</div>
+      <div class="faq-answer">بله، آماده پذیرش پروژه‌های دورکاری در حوزه‌های کدینگ، انبارداری فنی و مشاوره نگهداری (PM).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">آیا برای کار در تمامی معادن کشور آماده‌اید؟</div>
+      <div class="faq-answer">بله، با توجه به سابقه کار در پروژه‌های ملی و مناطق مختلف، آمادگی فعالیت در سراسر کشور را دارم.</div>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="wrap">
   <h2>تماس و مشخصات</h2>
   <div class="contact-grid">
-    <div class="card"><h3>واتس‌اپ</h3><p><a href="https://wa.me/989169585779" target="_blank">ارسال پیام در واتس‌اپ</a></p></div>
-    <div class="card"><h3>تلفن</h3><p><a href="tel:+989169585779">۰۹۱۶۹۵۸۵۷۷۹</a></p></div>
-    <div class="card"><h3>ایمیل</h3><p><a href="mailto:sh785hd@gmail.com">sh785hd@gmail.com</a></p></div>
-    <div class="card"><h3>لینکدین</h3><p><a href="https://www.linkedin.com/in/milad-shamsara" target="_blank">milad-shamsara</a></p></div>
+    <div class="contact-card">
+      <h3>📱 واتس‌اپ</h3>
+      <a href="https://wa.me/989169585779" target="_blank">ارسال پیام</a>
+    </div>
+    <div class="contact-card">
+      <h3>📞 تلفن</h3>
+      <a href="tel:+989169585779">۰۹۱۶۹۵۸۵۷۷۹</a>
+    </div>
+    <div class="contact-card">
+      <h3>✉️ ایمیل</h3>
+      <a href="mailto:sh785hd@gmail.com">sh785hd@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <h3>🔗 لینکدین</h3>
+      <a href="https://www.linkedin.com/in/milad-shamsara" target="_blank">milad-shamsara</a>
+    </div>
+  </div>
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="assets/milad.vcf" download style="display: inline-block; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
+      📇 ذخیره کارت ویزیت دیجیتال (vCard)
+    </a>
   </div>
 </section>
 
