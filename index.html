@@ -27,7 +27,7 @@
   body {
     margin: 0;
     background-color: var(--bg-dark);
-    background-image: url('assets/bg-mining.jpg'); /* اگر این عکس رو نداری، این خط رو پاک کن */
+    background-image: url('assets/bg-mining.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -40,7 +40,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: linear-gradient(180deg, rgba(6,8,12,0.8) 0%, rgba(6,8,12,0.95) 100%);
+    background: linear-gradient(180deg, rgba(6,8,12,0.85) 0%, rgba(6,8,12,0.95) 100%);
     z-index: -1;
   }
 
@@ -105,6 +105,12 @@
   .contact-card h3 { margin: 0 0 10px; font-size: 1.1rem; color: #fff; }
   .contact-card a { color: var(--accent); text-decoration: none; font-size: 1rem; font-weight: 600; }
   .contact-card a:hover { text-decoration: underline; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card-bg); backdrop-filter: blur(10px); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { padding: 14px 18px; text-align: start; border-bottom: 1px solid var(--border); }
+  th { background: rgba(255, 255, 255, 0.05); font-weight: 700; color: var(--accent); }
+  tr:last-child td { border-bottom: none; }
 
   footer { border-top: 1px solid var(--border); padding-block: 30px; color: var(--muted); font-size: 0.9rem; text-align: center; background: rgba(6, 8, 12, 0.95); }
 
@@ -210,6 +216,46 @@
       <p class="meta"><strong>مس درخشان – معدن مس تخت گنبد</strong> | ۱۴۰۰ تا ۱۴۰۱</p>
       <p>برنامه‌ریزی عملیات تعمیر و نگهداری و پایش مستمر راندمان تجهیزات.</p>
     </article>
+    <article class="job">
+      <h3>مدیر فنی و ماشین‌آلات معدنی</h3>
+      <p class="meta"><strong>شرکت آریا جنوب ایرانیان – معدن سنگ آهن کویر (اسمالون)</strong> | ۱۳۹۸ تا ۱۴۰۰</p>
+      <p>مدیریت عملیات فنی و ماشین‌آلات، تدوین برنامه‌های بلندمدت نگهداری، طراحی چیدمان انبار و مدیریت منابع انسانی.</p>
+    </article>
+    <article class="job">
+      <h3>سرپرست دفتر فنی ماشین‌آلات</h3>
+      <p class="meta"><strong>مشارکت پرلیت و فلار – آب منطقه‌ای سیستان و بلوچستان</strong> | ۱۳۹۶ تا ۱۳۹۷</p>
+      <p>تهیه گزارش‌های فنی، مستندسازی تجهیزات و هماهنگی بین‌بخشی در پروژه سد خاکی ماشکید سراوان.</p>
+    </article>
+    <article class="job">
+      <h3>سرپرست دفتر فنی ماشین‌آلات</h3>
+      <p class="meta"><strong>شرکت بین‌المللی آباد راهان پارس – پالایشگاه ستاره خلیج فارس</strong> | ۱۳۹۳ تا ۱۳۹۶</p>
+      <p>اعمال استانداردهای ISO/ASTM، انجام بازرسی جوش (AWS-QC-1) و کنترل کیفیت تجهیزات.</p>
+    </article>
+    <article class="job">
+      <h3>مسئول نگهداری و تعمیرات</h3>
+      <p class="meta"><strong>قرارگاه سازندگی خاتم‌الانبیا – پروژه طرح گرمسیری</strong> | ۱۳۹۰ تا ۱۳۹۳</p>
+      <p>اجرای برنامه‌های نگهداری دوره‌ای و اضطراری و پایش عملکرد ماشین‌آلات سنگین.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>پروژه بین‌المللی</h2>
+  <div class="card">
+    <h3>نماینده رسمی شانتویی (Shantui)</h3>
+    <p class="meta" style="color: var(--accent); font-weight: bold;">شرکت اسپادانا – معدن طلای بولیوار، ونزوئلا | اوت ۲۰۲۰ تا دسامبر ۲۰۲۰</p>
+    <ul style="margin-top: 15px; padding-right: 20px; line-height: 1.8; color: var(--muted);">
+      <li>راه‌اندازی، تحویل و آموزش اپراتورها برای ۲۸ دستگاه ماشین‌آلات سنگین (لودر، بلدوزر، گریدر و دامپتراک).</li>
+      <li>جذب پرسنل محلی و برگزاری دوره‌های آموزشی میدانی برای ایشان در زمینه اصول کار، نگهداری و اپراتوری (PDI-PM).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>تحصیلات</h2>
+  <div class="card">
+    <h3>کارشناسی مهندسی مکانیک – گرایش ساخت و تولید</h3>
+    <p class="meta">دانشگاه آزاد اسلامی، واحد دورود | معدل: ۱۷.۶۰</p>
   </div>
 </section>
 
@@ -231,7 +277,29 @@
       <span class="skill-tag">ISO/ASTM</span>
       <span class="skill-tag">AWS-QC-1</span>
       <span class="skill-tag">LINK ONE, SIS</span>
+      <span class="skill-tag">زبان انگلیسی (خوب)</span>
     </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>دوره‌های آموزشی و گواهینامه‌ها</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>عنوان دوره</th><th>مؤسسه</th><th>مدت</th></tr></thead>
+      <tbody>
+        <tr><td>اصول نگهداری و تعمیرات</td><td>شرکت هسکو</td><td>۸۰ ساعت</td></tr>
+        <tr><td>اصول مدیریت</td><td>دکتر مازیار میر</td><td>۸۰ ساعت</td></tr>
+        <tr><td>بازرسی جوش AWS-QC-1</td><td>انجمن جوشکاری و آزمایش‌های غیر مخرب ایران (IWNT)</td><td>۸۰ ساعت</td></tr>
+        <tr><td>تراشکار و فرزکار CNC</td><td>سازمان فنی و حرفه‌ای خرم‌آباد</td><td>۱۲۰۰ ساعت</td></tr>
+        <tr><td>پرس شلنگ هیدرولیک</td><td>شرکت متاکو</td><td>۸۰ ساعت</td></tr>
+        <tr><td>سرویس و نگهداری عمومی ماشین‌آلات</td><td>شرکت یکران وزین آریا</td><td>۲۰ ساعت</td></tr>
+        <tr><td>ایمنی ماشین‌آلات معدنی</td><td>مهندس حمیدرضا احراری</td><td>۲۰ ساعت</td></tr>
+        <tr><td>مدیریت منابع انسانی</td><td>شرکت ایران خودرو دیزل</td><td>۲۰ ساعت</td></tr>
+        <tr><td>آنالیز روغن ماشین‌آلات و تجهیزات معدنی</td><td>شرکت فنی و مهندسی نوین نت پارس</td><td>۲۰ ساعت</td></tr>
+        <tr><td>شناخت لاستیک‌های معدنی</td><td>دکتر میقانی</td><td>۲۰ ساعت</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
